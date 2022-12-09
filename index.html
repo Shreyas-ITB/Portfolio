@@ -227,7 +227,7 @@
         border-radius: 50%;
         width: 138px;
         height: 138px;
-        margin-left: 33%;
+        margin-left: -10%;
         top: 0%;
         overflow: hidden;
     }
@@ -235,8 +235,8 @@
     .avatarbox::before {
         content: '';
         position: absolute;
-        inset: -10px 35px;
-        background: linear-gradient(315deg, #fc606f, #ff7660, #fca643);
+        inset: -10px 40px;
+        background: linear-gradient( #fc606f, #fc7c54, #ff7660, #fc2495, #fc3888, #fb9052, #fca643);
         transition: 0.5s;
         animation: animate 4s linear infinite;
     }
@@ -266,10 +266,14 @@
     .avatarcontent {
         position: absolute;
         inset: 5px;
-        border: 2px solid #070a1c;
+        border: 2px solid #15151b;
         z-index: 3;
         border-radius: 50%;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .avatarcontent img {
@@ -281,11 +285,31 @@
         object-fit: cover;
         transition: 0.5s;
         pointer-events: none;
+        z-index: 3;
     }
 
     .avatarbox:hover .avatarcontent img {
         opacity: 0;
     }
+
+    .avatarcontent a {
+        position: relative;
+        background: linear-gradient(315deg, #fc606f, #ff7660, #fca643);
+        color: #FBF7F4;
+        border-radius: 25px;
+        padding: 4px 2px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        transition: 0.5s;
+        font-size: 0.7em;
+    }
+
+    .avatarcontent a:hover {
+        letter-spacing: 0.2em;
+    }
+
     </style>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -296,15 +320,12 @@
                 <div class="column has-text-right">
                     <div class="columns is-multiline is-centered">
                         <div class="column is-full">
-                            <!--<div class="avatarbox">
-                                <div class="avatarcontent">
-                                    <img src="assets/Shreyas.jpg">
-                                </div>
-                            </div>-->
-                            <a href="https://github.com/Shreyas-ITB">
                             <figure class="image is-128x128 avatar">
-                                <div class="avatarcontent">
-                                    <img class="is-rounded imgshadow" src="assets/Shreyas.jpg">
+                                <div class="avatarbox">
+                                    <div class="avatarcontent">
+                                        <img src="assets/Shreyas.jpg">
+                                        <a href="https://github.com/Shreyas-ITB">Github profile</a>
+                                    </div>
                                 </div>
                             </figure>
                         </a>
@@ -369,7 +390,7 @@
                             <div>
                                 <p class="heading mb-0 is-size-6">ABOUT <b>ME</b></p>
                                 <div class="content">
-                                    I'm a(n) <b id="age"></b> year old Co-founder, Developer and also a student living in <b>Banglore</b>, <b>Karnataka</b>, <b>India</b>. I finished schooling in 2022 and currently persuing PreUniversity in <b>MES College</b>. Im a Co-founder and Developer of <b id="siricoinlink">SiriCoin CryptoCurrency</b>. Passionate about new <b>technologies and trends</b>. Would like to <b>explore and try out new things</b>!!!
+                                    I'm a(n) <b id="age"></b> year old Co-founder, Developer and also a student living in <b>Banglore</b>, <b>Karnataka</b>, <b>India</b>. I finished schooling in 2022 and currently persuing PreUniversity of <b>Banglore</b>. Im a Co-founder and Developer of <b id="siricoinlink">SiriCoin CryptoCurrency</b>. Passionate about new <b>technologies and trends</b>. Would like to <b>explore and try out new things</b>!!!
                                 </div>
                             </div>
                         </div>
