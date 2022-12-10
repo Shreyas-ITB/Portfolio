@@ -90,7 +90,8 @@
         flex-direction: column;
     }
 
-    .container .box {
+    .container .box,
+    .container .box.adbox {
         position: relative;
         width: 586px;
         height: 178px;
@@ -101,16 +102,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
 
-    .container .box.adbox {
+        border-radius: 15px;
+        box-shadow: -15px -15px 15px #fc606f,
+        15px 15px 15px #fca643,
+        inset -5px -5px 5px rgba(202, 176, 176, 0.2),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+    }
+    /* .container .box.adbox {
         background: linear-gradient(90deg, #fc606f, #ff7660, #fca643);
         border-radius: 15px;
         box-shadow: -15px -15px 15px #fc606f,
         15px 15px 15px #fca643,
-        inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+        inset -5px -5px 5px rgba(202, 176, 176, 0.2),
         inset 5px 5px 5px rgba(0, 0, 0, 0.1);
-    }
+    } */
 
     .imgshadow {
         -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.6));
@@ -310,7 +316,22 @@
         letter-spacing: 0.2em;
     }
 
+    .container .box.adbox .footercontent {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .container .box.adbox ins {
+        position: absolute;
+        top: 0;
+        padding-top: 10px;
+    }
+
     </style>
+
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
@@ -613,21 +634,25 @@
             </div>
             <div class="container">
                 <div class="box adbox">
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2225520784912234" crossorigin="anonymous"></script>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2225520784912234"
+                        crossorigin="anonymous"></script>
                     <!-- Shreyas Portfolio ad#1 -->
-                       <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2225520784912234" data-ad-slot="6003856941" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                        <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
-                    <div class="content" id="adblocker_detected">
-                        <p class="title is-size-5 mb-0">
-                            An ad should be here but
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-2225520784912234"
+                        data-ad-slot="6003856941"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    <div class="footercontent">
+                        <p class="title is-size-6 mb-0">
+                            These ads help me make
                             <span class="has-text-weight-bold">
-                                you're using an adblocker 😞
+                                more projects and also keep up with my current projects.
                             </span>
-                        </p>
-                        <p class="content">
-                            I'm a poor little developer who spends<b class="has-text-danger-dark"> my own money</b> to maintain my projects and my hobby. Ads help me to make more projects like this. A <b>single ad</b> here helps in covering these costs.
-                            If you like the projects that i have made then
-                            <span class="has-text-success-dark">Thanks in advance and please, <b>whitelist us in your adblocker</b> 😕</span>
+                            <span class="has-text-success-dark">If you are using an adblocker then please, <b>whitelist this website in your adblocker</b> 😕</span>
                         </p>
                     </div>
                 </div>
@@ -635,6 +660,7 @@
         </div>
     </section>
 </body>
+
 <script>
 const day = 24 * 60 * 60 * 1000;
 const age = document.getElementById("age");
@@ -646,7 +672,6 @@ round_to = function(precision, value) {
 }
 
 day_diff = function(d1, d2) {
-    /* totally not borrowed from kristians page */
     return (d2 - Date.parse(d1)) / day;
 }
 
