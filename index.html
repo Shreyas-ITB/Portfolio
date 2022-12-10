@@ -86,37 +86,40 @@
 
     .container {
         position: relative;
-        display: flex;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
         flex-direction: column;
     }
 
-    .container .box,
-    .container .box.adbox {
+    .container .box {
         position: relative;
-        width: 586px;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        width: 430px;
         height: 178px;
         align-self: center;
         text-align: justify;
         background: linear-gradient(90deg, #fc606f, #ff7660, #fca643);
         font-family: consolas;
         display: flex;
+        opacity: 1;
         justify-content: center;
         align-items: center;
-
+    }
+    .container .box.cadbox {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        background: linear-gradient(90deg, #fc606f, #ff7660, #fca643);
         border-radius: 15px;
+        opacity: 1;
         box-shadow: -15px -15px 15px #fc606f,
         15px 15px 15px #fca643,
         inset -5px -5px 5px rgba(202, 176, 176, 0.2),
         inset 5px 5px 5px rgba(0, 0, 0, 0.1);
     }
-    /* .container .box.adbox {
-        background: linear-gradient(90deg, #fc606f, #ff7660, #fca643);
-        border-radius: 15px;
-        box-shadow: -15px -15px 15px #fc606f,
-        15px 15px 15px #fca643,
-        inset -5px -5px 5px rgba(202, 176, 176, 0.2),
-        inset 5px 5px 5px rgba(0, 0, 0, 0.1);
-    } */
 
     .imgshadow {
         -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.6));
@@ -316,18 +319,22 @@
         letter-spacing: 0.2em;
     }
 
-    .container .box.adbox .footercontent {
-        position: absolute;
-        bottom: 0;
-        padding-bottom: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
+    .footerclass{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
     }
 
-    .container .box.adbox ins {
-        position: absolute;
-        top: 0;
-        padding-top: 10px;
+    .acontent1 {
+        padding-top: 25px;
+        margin-left: 100px;
+    }
+
+    .acontent2 {
+        padding: auto;
+        margin-left: 100px;
     }
 
     </style>
@@ -633,28 +640,41 @@
                 </div>
             </div>
             <div class="container">
-                <div class="box adbox">
-                    <script type="text/javascript">
-	                atOptions = {
-		            'key' : 'db4b33c23cf8682ce15892a429bfa1ce',
-		            'format' : 'iframe',
-		            'height' : 60,
-		            'width' : 468,
-		            'params' : {}
-	                };
-	                document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplayformat.com/db4b33c23cf8682ce15892a429bfa1ce/invoke.js"></scr' + 'ipt>');
-                    </script>
-                   <div class="footercontent">
-                        <p class="title is-size-6 mb-0">
-                            These ads help me make
-                            <span class="has-text-weight-bold">
-                                more projects and also keep up with my current projects.
-                            </span>
-                            <span class="has-text-success-dark">If you are using an adblocker then please, <b>whitelist this website in your adblocker</b> 😕</span>
-                        </p>
+                <div class="box cadbox">
+                    <div class="acontent1">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : 'db4b33c23cf8682ce15892a429bfa1ce',
+                                'format' : 'iframe',
+                                'height' : 60,
+                                'width' : 468,
+                                'params' : {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplayformat.com/db4b33c23cf8682ce15892a429bfa1ce/invoke.js"></scr' + 'ipt>');
+                        </script>
+                    </div>
+                    <div class="acontent2">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : 'db4b33c23cf8682ce15892a429bfa1ce',
+                                'format' : 'iframe',
+                                'height' : 60,
+                                'width' : 468,
+                                'params' : {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplayformat.com/db4b33c23cf8682ce15892a429bfa1ce/invoke.js"></scr' + 'ipt>');
+                        </script>
                     </div>
                 </div>
             </div>
+            <footer class="footerclass">
+                <p class="title is-size-6 mb-0">
+                    If you're using an <b class="has-text-danger-dark">Adblocker</b> 😞
+                    <span class="has-text-weight-bold">
+                        then please whitelist this website, because its the only source of income for me. <b class="has-text-success-dark">Which helps me keep my projects alive and also helps me to continue my hobby Thanks!</b>.
+                    </span>
+                </p>
+            </footer>
         </div>
     </section>
 </body>
